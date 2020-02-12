@@ -60,7 +60,6 @@ class HashTable:
             self.storage[hashed_key] = LinkedPair(key, value)
             return
 
-        prev = node
         while node is not None:
             prev = node
             node = node.next
