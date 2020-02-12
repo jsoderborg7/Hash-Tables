@@ -106,9 +106,6 @@ class HashTable:
         hashed_key = self._hash_mod(key)
         node = self.storage[hashed_key]
 
-        if node is None:
-            return None
-
         while node is not None and node.key != key:
             node = node.next
 
