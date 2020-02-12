@@ -87,12 +87,11 @@ class HashTable:
         if node is None:
             return None
         else:
-            result = node.value
             if prev is None:
                 self.storage[hashed_key] = node.next
             else:
                 prev.next = prev.next.next
-            return result
+            return node.value
 
     def retrieve(self, key):
         '''
